@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter1184971334765771919.jar /mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire 2025-09-27T16-12-32_802-jvmRun1 surefire10144891529877774514tmp surefire_02052703587424860556tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter778727578026849036.jar /mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire 2025-09-27T16-50-30_708-jvmRun1 surefire5813845278076617050tmp surefire_07849137636766250552tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/test-classes:/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/classes:/home/areen/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/home/areen/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/areen/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/home/areen/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/areen/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/home/areen/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter1184971334765771919.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter778727578026849036.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.16+8-Ubuntu-0ubuntu122.04.1"/>
     <property name="user.name" value="areen"/>
