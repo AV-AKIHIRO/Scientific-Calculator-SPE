@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = "areen9295/calc-app"
+        DOCKER_IMAGE = "areen9295/calc-app2"
     }
 
     stages {
