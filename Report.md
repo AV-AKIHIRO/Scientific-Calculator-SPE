@@ -24,7 +24,15 @@
 ## 2. What and Why of DevOps?
 
 * **What is DevOps?**
-  (Explain definition, integration of Dev + Ops, automation, CI/CD etc.)
+  DevOps is a cultural and technical practice that unifies software development (Dev) and IT operations (Ops) to deliver applications and services faster, more reliably, and with higher quality. It emphasizes collaboration across teams, automation of repetitive tasks, and continuous feedback throughout the software lifecycle. Key components include:
+  - Continuous Integration (CI)
+  - Continuous Delivery/Deployment (CD)
+  - Infrastructure as code (IaC),
+  - Automated testing
+  - Monitoring
+  - Rapid rollback capabilities.
+
+
 
 * **Why DevOps?**
 
@@ -33,7 +41,8 @@
   * Scalability
   * Easier deployment & rollback
 
-*(Add diagram if possible – “DevOps Infinity Loop”)*
+<!-- *(Add diagram if possible – “DevOps Infinity Loop”)* -->
+<img src="images/DevOps-Loop-1200.png" width="600" alt="devops" />
 
 ---
 
@@ -56,7 +65,7 @@
 ### 4.1 Source Control Management (Git + GitHub)
 
 * **Brief:** Code versioning, collaboration, rollback.
-* **Setup:** Installed Git, created GitHub repo `ScientificCalculator-DevOps`.
+* **Setup:** Installed Git, created GitHub repo `Scientific-Calculator-SPE`.
 * **Commands Used:**
 
   ```bash
@@ -69,8 +78,10 @@
 * **Screenshots:**
 
   * GitHub repo creation
-  * Git push logs
+  <img src="images\git-1.png" width="600" alt="Git repo create" />
+  
   * Repo showing uploaded code
+  <img src="images\github-1.png" width="600" alt="GitHub structure" />
 
 ---
 
@@ -90,8 +101,7 @@
   * `AdvOpsTest.java`
 * **Screenshots:**
 
-  * Test case run in terminal
-  * Test result (green ✔)
+<img src="images\mvn-test.png" width="400" alt="GitHub structure" />
 
 ---
 
@@ -103,10 +113,23 @@
   ```bash
   mvn clean package
   ```
+  Alternatively,you could also use:
+
+  ```bash
+  mvn clean build
+  mvn test
+  mvn package
+  ```
+
 * **Output:** `target/scientific-calculator-1.0-SNAPSHOT.jar`
 * **Screenshots:**
 
+<img src="images\mvn-clean-package-1.png" width="400" alt="Image 1 showing mvn clean package result" />
+<img src="images\mvn-clean-package-2 mvn-test.png" width="400" alt="Image 2 showing mvn clean package result" />
+
   * Successful build logs
+
+  <img src="images\file-struct-jar.png" width="180" alt="Image showing created .jar file">
   * Generated JAR file
 
 ---
