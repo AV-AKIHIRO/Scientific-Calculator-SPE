@@ -1,18 +1,48 @@
+# - name: Deploy SciCalc Docker container
+#   hosts: local
+#   become: no
+
+#   tasks:
+#     - name: Ensure Python 'docker' is there
+#       ansible.builtin.pip:
+#         name: docker
+#         state: present
+     
+#     # 2. Deploy and manage scientific-calculator container
+#     - name: Deploy and manage scientific-calculator container from Docker Hub
+#       community.docker.docker_container:
+#         name: calc-app2
+#         image: areen9295/calc-app2:latest
+#         state: started
+#         pull: yes
+#         recreate: yes
+#         ports:
+#           - "9000:80"
+#         restart_policy: always
+
+
 - name: Deploy SciCalc Docker container
-  hosts: local
+  hosts: localhost
+  connection: local
   become: no
 
   tasks:
-    - name: Ensure Python 'docker' is there
-      ansible.builtin.pip:
-        name: docker
-        state: present
-     
-    # 2. Deploy and manage scientific-calculator container
-    - name: Deploy and manage scientific-calculator container from Docker Hub
+    # 1️⃣  Skip pip, just verify the docker Python module exists
+    - name: Check if python3-docker is installed
+      ansible.builtin.command: python3 -c "import docker"
+      register: docker_check
+      ignore_errors: yes
+
+    - name: Fail if docker module missing
+      ansible.builtin.fail:
+        msg: "Python docker module is missing — run 'sudo apt install -y python3-docker' on Jenkins host."
+      when: docker_check.rc != 0
+
+    # 2️⃣  Deploy container
+    - name: Deploy and manage scientific-calculator container
       community.docker.docker_container:
         name: calc-app2
-        image: areen9295/calc-app2:latest
+        image: "areen9295/calc-app2:{{ docker_image_tag | default('latest') }}"
         state: started
         pull: yes
         recreate: yes
