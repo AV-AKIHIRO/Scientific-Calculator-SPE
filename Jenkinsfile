@@ -71,7 +71,7 @@ pipeline {
                 
                 // Execute the playbook, passing the newly created Docker tag as an extra variable.
                 // NOTE: The Jenkins agent must have Ansible installed.
-                sh "ansible-playbook ${ANSIBLE_INVENTORY} ${ANSIBLE_PLAYBOOK} -e \"docker_image_tag=${DOCKER_IMAGE}:${env.BUILD_NUMBER}\""
+                sh "ansible-playbook -i ${ANSIBLE_INVENTORY} ${ANSIBLE_PLAYBOOK} -e \"docker_image_tag=${DOCKER_IMAGE}:${env.BUILD_NUMBER}\""
             }
         }
     }
@@ -111,5 +111,6 @@ pipeline {
         }
     }
 }
+
 
 
