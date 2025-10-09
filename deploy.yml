@@ -1,19 +1,4 @@
-#---
-#- name: Deploy Calc-app Docker container
-#  hosts: local
-#  become: yes
-#  tasks:
-#    - name: Pull latest Docker image from Docker Hub
-#      command: docker pull areen9295/calc-app2:latest
-#
-#    - name: Stop and remove existing SciCalc container (if running)
-#      command: docker rm -f scicalc-app
-#      ignore_errors: yes
-#
-#    - name: Run SciCalc container
-#      command: docker run -d --name scicalc-app areen9295/calc-app2:latest
-#
----
+
 - name: Deploy SciCalc Docker container
   hosts: local 
   become: no
@@ -24,10 +9,10 @@
         name: docker
         state: present
 
-    # 2. Deploy and manage SciCalc container
-    - name: Deploy and manage SciCalc container from Docker Hub
+    # 2. Deploy and manage scientific-calculator container
+    - name: Deploy and manage scientific-calculator container from Docker Hub
       community.docker.docker_container:
-        name: scicalc-app
+        name: calc-app2
         image: areen9295/calc-app2:latest
         state: started
         
