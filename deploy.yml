@@ -1,6 +1,6 @@
 - name: Deploy SciCalc Docker container
   hosts: localhost
-  become: yes
+  become: no
 
   tasks:
     # 1. Ensure python3-docker system package is installed (safe on Ubuntu/Debian)
