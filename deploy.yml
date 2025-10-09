@@ -1,29 +1,23 @@
-
 - name: Deploy SciCalc Docker container
-  hosts: local 
-  become: no
+  hosts: localhost
+  become: yes
+
   tasks:
-    # 1. Ensure the Python 'docker' package is installed
-    - name: Ensure Python 'docker' package is installed
-      ansible.builtin.pip:
-        name: docker
+    # 1. Ensure python3-docker system package is installed (safe on Ubuntu/Debian)
+    - name: Ensure python3-docker system package is installed
+      apt:
+        name: python3-docker
         state: present
+      when: ansible_facts['pkg_mgr'] == 'apt'
 
     # 2. Deploy and manage scientific-calculator container
     - name: Deploy and manage scientific-calculator container from Docker Hub
       community.docker.docker_container:
         name: calc-app2
-        image: areen9295/calc-app2:latest
+        image: "areen9295/calc-app2:{{ docker_image_tag | default('latest') }}"
         state: started
-        
-        # Pull latest image and force recreation
-        pull: yes 
-        recreate: yes 
-        
-        # --- CORRECTION APPLIED HERE (Changed Host Port to 9000) ---
-        # Map container port 80 to host port 9000
+        pull: yes
+        recreate: yes
         ports:
           - "9000:80"
-          
         restart_policy: always
-
