@@ -9,7 +9,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "areen9295/calc-app2"
         // Define the location of the Ansible inventory file (e.g., hosts.ini)
-        ANSIBLE_INVENTORY = "hosts.ini" 
+        ANSIBLE_INVENTORY = "inventory.ini" 
         // Define the playbook file (assuming it's in the root of the repo)
         ANSIBLE_PLAYBOOK = "deploy.yml"
     }
@@ -111,3 +111,4 @@ pipeline {
         }
     }
 }
+
