@@ -3,13 +3,7 @@
   become: no
 
   tasks:
-    # 1. Ensure python3-docker system package is installed (safe on Ubuntu/Debian)
-    - name: Ensure python3-docker system package is installed
-      apt:
-        name: python3-docker
-        state: present
-      when: ansible_facts['pkg_mgr'] == 'apt'
-
+   
     # 2. Deploy and manage scientific-calculator container
     - name: Deploy and manage scientific-calculator container from Docker Hub
       community.docker.docker_container:
