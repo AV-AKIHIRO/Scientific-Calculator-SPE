@@ -27,7 +27,7 @@
   become: no
 
   tasks:
-    # 1️⃣  Skip pip, just verify the docker Python module exists
+    # Skip pip, just verify the docker Python module exists
     - name: Check if python3-docker is installed
       ansible.builtin.command: python3 -c "import docker"
       register: docker_check
@@ -38,11 +38,11 @@
         msg: "Python docker module is missing — run 'sudo apt install -y python3-docker' on Jenkins host."
       when: docker_check.rc != 0
 
-    # 2️⃣  Deploy container
+    # Deploy container
     - name: Deploy and manage scientific-calculator container
       community.docker.docker_container:
         name: calc-app2
-        image: "areen9295/calc-app2:{{ docker_image_tag | default('latest') }}"
+        image: areen9295/calc-app2:latest
         state: started
         pull: yes
         recreate: yes
