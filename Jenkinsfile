@@ -8,6 +8,10 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "areen9295/calc-app2"
+        // Define the location of the Ansible inventory file (e.g., hosts.ini)
+        ANSIBLE_INVENTORY = "hosts.ini" 
+        // Define the playbook file (assuming it's in the root of the repo)
+        ANSIBLE_PLAYBOOK = "deploy.yml"
     }
 
     stages {
@@ -60,6 +64,16 @@ pipeline {
                 }
             }
         }
+
+        stage('Ansible Deploy') {
+            steps {
+                echo "Starting Ansible deployment for image ${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
+                
+                // Execute the playbook, passing the newly created Docker tag as an extra variable.
+                // NOTE: The Jenkins agent must have Ansible installed.
+                sh "ansible-playbook -i ${ANSIBLE_INVENTORY} ${ANSIBLE_PLAYBOOK} -e \"docker_image_tag=${DOCKER_IMAGE}:${env.BUILD_NUMBER}\""
+            }
+        }
     }
 
     post {
@@ -69,7 +83,7 @@ pipeline {
                 to: 'areen.vaghasiya+jenkins@iiitb.ac.in',
                 subject: "Jenkins Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                Hi Team,
+                Hi,
 
                 The Jenkins pipeline for *${env.JOB_NAME}* completed successfully.
                 Docker Image pushed: ${DOCKER_IMAGE}:${env.BUILD_NUMBER}
@@ -85,7 +99,7 @@ pipeline {
                 to: 'areen.vaghasiya+jenkins@iiitb.ac.in',
                 subject: "Jenkins Build FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """
-                Hi Team,
+                Hi ,
 
                 The Jenkins pipeline for *${env.JOB_NAME}* has FAILED.
                 Please check Jenkins logs for details.

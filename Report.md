@@ -82,6 +82,10 @@
   
   * Repo showing uploaded code
   <img src="images\github-1.png" width="600" alt="GitHub structure" />
+  
+  * Commits on Github
+  <img src="images\github-commits.png" width="500" alt="GitHub structure" />
+
 
 ---
 
@@ -107,7 +111,7 @@
 
 ### 4.3 Build (Maven)
 
-* **Brief:** Packaging code into JAR file for portability.
+* **Brief:** Packaging the project into a JAR so the application can be run, containerized, or distributed. The Maven build compiles source code, runs unit tests, and assembles a reproducible artifact (the JAR) according to pom.xml settings
 * **Commands Used:**
 
   ```bash
@@ -116,11 +120,11 @@
   Alternatively,you could also use:
 
   ```bash
-  mvn clean build
+  mvn clean compile
   mvn test
   mvn package
   ```
-
+* **What happens:** Maven resolves dependencies, compiles sources, executes tests (JUnit), and packages the application into target/<artifactId>-<version>.jar (name set in pom.xml). Failing tests stop the build by default.
 * **Output:** `target/scientific-calculator-1.0-SNAPSHOT.jar`
 * **Screenshots:**
 
@@ -132,6 +136,10 @@
   <img src="images\file-struct-jar.png" width="180" alt="Image showing created .jar file">
   * Generated JAR file
 
+* **Common troubleshooting:**
+  - Dependency download errors: run `mvn -U clean package` to force updates and check network/registry settings.
+  - Test failures: inspect `target/surefire-reports/` for stack traces and rerun failing tests locally.
+  - Missing JDK/Maven on CI agent: verify Jenkins Global Tool Configuration and agent environment.
 ---
 
 ### 4.4 Continuous Integration (Jenkins)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AdvOpsTest" time="0.258" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AdvOpsTest" time="0.316" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter15291109536275817978.jar /mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire 2025-09-28T18-13-59_575-jvmRun1 surefire2408143057484162635tmp surefire_014966311002845942948tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter11563827076308547115.jar /mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire 2025-10-06T18-14-23_385-jvmRun1 surefire11001021509924268867tmp surefire_0668837818708136915tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/test-classes:/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/classes:/home/areen/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.1/junit-jupiter-api-5.8.1.jar:/home/areen/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/areen/.m2/repository/org/junit/platform/junit-platform-commons/1.8.1/junit-platform-commons-1.8.1.jar:/home/areen/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/areen/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.1/junit-jupiter-engine-5.8.1.jar:/home/areen/.m2/repository/org/junit/platform/junit-platform-engine/1.8.1/junit-platform-engine-1.8.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter15291109536275817978.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Users/Areen Vaghasiya/OneDrive - iiit-b/Courses/Areen SEM7/SPE/Mini-Project/Scientific-Calculator-SPE/target/surefire/surefirebooter11563827076308547115.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.16+8-Ubuntu-0ubuntu122.04.1"/>
     <property name="user.name" value="areen"/>
@@ -51,8 +51,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testPower" classname="AdvOpsTest" time="0.185"/>
+  <testcase name="testPower" classname="AdvOpsTest" time="0.225"/>
   <testcase name="testFactorial" classname="AdvOpsTest" time="0.002"/>
   <testcase name="testNaturalLog" classname="AdvOpsTest" time="0.002"/>
-  <testcase name="testSquareRoot" classname="AdvOpsTest" time="0.002"/>
+  <testcase name="testSquareRoot" classname="AdvOpsTest" time="0.001"/>
 </testsuite>
