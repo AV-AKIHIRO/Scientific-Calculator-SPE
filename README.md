@@ -9,7 +9,7 @@ A terminal-based scientific calculator application built with Java, featuring a 
 ## Project Overview
 
 **Student Name:** Areen Vaghasiya  
-**Roll Number:** IMT2022048  
+**Roll Number:** IMT2022048
 
 This project implements a scientific calculator with four core advanced mathematical operations and demonstrates a complete DevOps lifecycle from source control to automated deployment.
 
@@ -261,6 +261,7 @@ The pipeline sends automated email notifications on:
 **Areen Vaghasiya** (IMT2022048)
 
 ---
+
 
 
 
