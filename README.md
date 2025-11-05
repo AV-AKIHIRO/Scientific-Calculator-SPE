@@ -1,6 +1,6 @@
 # Scientific Calculator with DevOps Pipeline
 
-A terminal-based scientific calculator application built with Java, featuring a complete CI/CD pipeline demonstrating modern DevOps practices including automated testing, containerization, and continuous deployment
+A terminal-based scientific calculator application built with Java, featuring a complete CI/CD pipeline demonstrating modern DevOps practices including automated testing, containerization, and continuous deployment. cc
 
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-areen9295%2Fcalc--app2-blue)](https://hub.docker.com/r/areen9295/calc-app2)
 [![Java](https://img.shields.io/badge/Java-17-orange)](https://www.oracle.com/java/)
@@ -260,6 +260,7 @@ The pipeline sends automated email notifications on:
 **Areen Vaghasiya** (IMT2022048)
 
 ---
+
 
 
 
